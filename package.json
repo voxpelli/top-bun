@@ -50,14 +50,15 @@
     "minimist": "^1.2.5",
     "p-map": "^7.0.0",
     "package-json": "^8.1.1",
+    "pkg-dir": "^8.0.0",
     "pretty": "^2.0.0",
     "pretty-tree": "^1.0.0",
     "read-pkg": "^9.0.1",
-    "pkg-dir": "^8.0.0",
     "uhtml-isomorphic": "^2.0.0",
     "write-package": "^7.0.0"
   },
   "devDependencies": {
+    "@tapjs/tsx": "^1.1.18",
     "@types/browser-sync": "^2.27.3",
     "@types/js-yaml": "^4.0.8",
     "@types/markdown-it": "^13.0.5",
@@ -65,7 +66,7 @@
     "@types/markdown-it-footnote": "^3.0.2",
     "@types/minimist": "^1.2.4",
     "@types/node": "^20.8.4",
-    "@voxpelli/tsconfig": "^9.0.0",
+    "@voxpelli/tsconfig": "^10.0.0",
     "auto-changelog": "^2.0.0",
     "dependency-cruiser": "^15.0.0",
     "gh-release": "^7.0.0",
@@ -74,7 +75,7 @@
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "tap": "^18.4.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.3.2"
   },
   "homepage": "https://github.com/bcomnes/top-bun",
   "keywords": [],
@@ -124,11 +125,14 @@
     ]
   },
   "tap": {
-    "typecheck": false,
     "allow-incomplete-coverage": true,
     "coverage-report": [
       "text",
       "lcovonly"
+    ],
+    "plugin": [
+      "@tapjs/tsx",
+      "!@tapjs/typescript"
     ]
   }
 }
